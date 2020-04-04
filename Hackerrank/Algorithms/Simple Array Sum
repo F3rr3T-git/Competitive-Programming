@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+#include <iostream>
+
+using namespace std;
+
+
+int main() {
+
+    int i,t,a;
+    long long int sm=0;
+    cin >> t;
+    
+    for(i=0;i<t;i++)
+    {
+        cin >> a;
+       sm += a;
+    }
+
+    cout << sm << endl;
+    
+
+    return 0;
+}
