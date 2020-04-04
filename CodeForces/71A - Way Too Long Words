@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+#define endl '\n'
+ 
+int main()
+{
+        int n;
+        cin >> n;
+        string s,s1;
+        
+        while(n--)
+        {
+                cin >> s;
+                
+                if(s.length()<=10)
+                cout << s << endl;
+                else
+                {
+                s1 += s[0];
+                s1 += to_string(s.length()-2);
+                s1 += s[s.length()-1];
+                cout << s1 << endl;
+                }
+                
+                s1.clear();
+        
+        }
+        
+        return 0;
+}
