@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   int i,j,n,r,d;
+   cin >> n >> d;
+   int ar[n],br[n];
+
+   for(i=0;i<n;i++)
+   cin >> ar[i];
+
+   j = 0;
+   for(i=d;i<n;i++)
+   {
+       br[j] = ar[i];
+       j++;
+   }
+
+   for(i=0;i<d;i++)
+   {
+       br[j] = ar[i];
+       j++;
+   }
+   
+   
+   for(i=0;i<n;i++)
+   cout << br[i] << " ";
+
+    return 0;
+}
