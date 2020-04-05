@@ -1,0 +1,49 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    int i,fg=0;
+    string s;
+    vector<char> v;
+    cin >> n;
+
+    while(n--)
+    {
+
+    int fg=0;
+    cin >> s;
+    v.clear();
+    v.push_back('@');
+
+    for(i=0;i<s.length();i++)
+    {
+        if(s[i]=='('||s[i]=='['||s[i]=='{')
+        v.push_back(s[i]);
+
+        else
+        {
+            if(v[v.size()-1]=='(' && s[i]==')')
+            v.pop_back();
+
+            else if(v[v.size()-1]=='[' && s[i]==']')
+            v.pop_back();
+
+            else if(v[v.size()-1]=='{' && s[i]=='}')
+            v.pop_back();
+
+            else
+            {
+                fg = 1;
+                break;
+            }
+        }
+    }
+
+    cout << (fg==0 && v.size()==1 ? "YES" : "NO") << endl;
+
+    }
+
+    return 0;
+}
