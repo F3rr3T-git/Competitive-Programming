@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+
+   int i,t,c=0,p=0,s=0;
+   cin >> t;
+   int a[t*t];
+
+   for(i=0;i<t*t;i++)
+    cin >> a[i];
+
+   for(i=0;i<t*t;i+=t+1)
+    p+= a[i];
+
+
+for(i=t-1;i<t*t;i+=t-1)
+   {
+       s += a[i] ;
+       c++;
+       if(c==t)
+       break;
+   }
+
+
+  cout << abs(p-s) << endl;
+
+    return 0;
+}
