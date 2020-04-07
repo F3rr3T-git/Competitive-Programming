@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+
+    int i,a,t,n=0,z=0,p=0;
+    double pr;
+    
+    cin >> t;
+
+    for(i=0;i<t;i++)
+    {
+       cin >> a;
+       
+       if(a==0)
+       z++;
+       else if(a>0)
+       p++;
+       else
+       n++;
+    }
+
+    pr  = (double)p/t;
+    cout << fixed << setprecision(6) << pr <<endl;
+    pr  = (double)n/t;
+    cout << fixed << setprecision(6) << pr <<endl; 
+    pr  = (double)z/t;
+    cout << fixed << setprecision(6) << pr <<endl;  
+
+    return 0;
+}
