@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+#include <algorithm>
+
+using namespace std;
+
+int main()
+{
+    int i;
+    long long int a,sm=0,mx=0,mn=1000000000;
+
+    for(i=0;i<5;i++)
+    { 
+        cin >> a;
+        sm += a;
+        mx = max(mx,a);
+        mn = min(mn,a);
+
+    }
+
+    cout << sm - mx << " " << sm - mn << endl;
+}
