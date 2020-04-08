@@ -1,0 +1,54 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int i,n;
+    string s,p;
+    cin >> s;
+
+    p = s.substr(0,2);  
+    n = stoi(p);
+    
+    if(s[s.length()-2] == 'P'&& n==12)
+    {
+       s.erase(s.begin()+8);
+       s.erase(s.begin()+8);   
+    }
+    
+    if(s[s.length()-2] == 'A' && n==12)
+    {
+       s.erase(s.begin()+8);
+       s.erase(s.begin()+8); 
+
+       s.erase(s.begin()+0);
+       s.erase(s.begin()+0); 
+
+       p = "00";
+       s = p.append(s);
+    }
+   
+    if(s[s.length()-2] == 'P')
+    {
+       s.erase(s.begin()+8);
+       s.erase(s.begin()+8); 
+
+       s.erase(s.begin()+0);
+       s.erase(s.begin()+0); 
+
+       n += 12;
+       p = to_string(n);
+       s = p.append(s);
+    }
+   
+    if(s[s.length()-2] == 'A')
+    {
+       s.erase(s.begin()+8);
+       s.erase(s.begin()+8);  
+    }
+
+    cout << s << endl;
+
+    return 0;
+}
+
