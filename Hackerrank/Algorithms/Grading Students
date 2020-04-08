@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin >>t ;
+
+    while(t--)
+    {
+        int n,c;
+        cin >> n;
+        
+         c =n;
+
+         c = c/5;
+         c = (c+1)*5;
+
+         if(n>=38)
+         {
+         if(c-n<3)
+         n = c;
+         }
+
+         cout << n << endl;
+
+    }
+}
