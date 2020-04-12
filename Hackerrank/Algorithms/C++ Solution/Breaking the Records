@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main ()
+{
+    int t;
+    long long int n,mn,mx,min=0,max=0;
+    cin >> t;
+    cin >> n;
+    mn = n;
+    mx = n;
+    t--;   
+
+    while(t--)
+    {
+        cin >> n;
+
+        if(n>mx)
+        {
+            mx  = n;
+            max++;
+        }
+
+        if(n<mn)
+        {
+            mn  = n;
+            min++;
+        }
+       
+       
+         
+    }
+
+    cout << max << " " << min << endl;
+}
