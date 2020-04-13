@@ -1,0 +1,52 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+  int n,i;
+  string s;
+  cin >> n;
+
+  if(n>=1700 && n<=1917)
+  {
+    if(n%4 == 0)
+    {
+       s = "12.09.";
+       s += to_string(n);
+       cout << s << endl;
+    }
+
+    else
+    {
+       s = "13.09.";
+       s += to_string(n);
+       cout << s << endl;
+    }
+  }
+
+  else if (n==1918)
+  {
+      s = "26.09.1918";
+      cout << s << endl;
+  }
+
+
+  else if(n>=1919 && n<=2700)
+  {
+    if(((n % 4 == 0) && (n % 100 != 0)) || (n % 400 == 0))
+    {
+       s = "12.09.";
+       s += to_string(n);
+       cout << s << endl;
+    }
+
+    else
+    {
+       s = "13.09.";
+       s += to_string(n);
+       cout << s << endl;
+    }
+  }
+
+  return 0;
+}
