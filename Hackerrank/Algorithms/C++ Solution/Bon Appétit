@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int i;
+    long long int n, k;
+    cin >> n >> k;
+    long long int ar[n],bcrgd,sm=0;
+
+    for(i=0;i<n;i++)
+    {
+        cin >> ar[i];
+        sm += ar[i];
+    }
+
+    cin >> bcrgd;
+
+    sm -= ar[k];
+    sm = sm/2;
+
+    if(bcrgd==sm)
+    cout << "Bon Appetit" << endl;
+    else 
+    cout << bcrgd-sm << endl; 
+
+    return 0;
+}
