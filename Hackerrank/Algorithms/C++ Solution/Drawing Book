@@ -1,0 +1,31 @@
+
+#include <bits/stdc++.h>
+#define endl '\n' ;
+
+using namespace std;
+
+int main()
+{
+    long int n,p,o,e;
+    cin >> n >> p;
+
+    if(p%2==0)
+    {
+        e=p;
+        o=p+1;
+    }
+    else
+    {
+
+        e=p-1;
+        o=p;
+    }
+
+
+    if(n%2==0)
+    cout << min(e/2,(n-e)/2) << endl;
+    if(n%2!=0)
+    cout << min(e/2,(n-o)/2) << endl;
+   
+    return 0;
+}
