@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n,i,tp,j=0;
+    cin >> n;
+    int ar[n],br[n]={0};
+
+    for(i=0;i<n;i++)
+    {
+        cin >> ar[i];
+    }
+
+    sort(ar,ar+n);
+
+     tp = ar[0];
+
+    for(i=0;i<n;i++)
+    {
+        if((ar[i]-tp)<=1)
+        {
+            br[j]++;
+        }
+        else
+        {
+            tp = ar[i];
+            j++;
+            br[j]++;
+        }
+    }
+    
+    sort(br,br+n);
+
+    cout << br[n-1] << endl;
+    
+
+return 0;
+}
