@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    long long int i,n,m,k,r,c=0;
+    string s,sr;
+    cin >> n >> m  >> k;
+
+    for(i=n;i<=m;i++)
+    {
+       s = to_string(i);
+       sr = s;
+       reverse(sr.begin(), sr.end());
+       r = stoi(s)-stoi(sr);
+
+       if(abs(r)%k==0)
+       c++; 
+    }
+    cout << c << endl;
+    
+
+    return 0;
+}
