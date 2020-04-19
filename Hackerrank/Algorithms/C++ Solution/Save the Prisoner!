@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+  int t;
+  cin >> t;
+
+  while(t--)
+  {
+    long long int n,m,s;
+    cin >> n >> m >> s;
+
+    m = m%n;
+    s = m + s -1;
+    s = s%n;
+
+    if(s==0)
+    s = n;
+
+    cout << s << endl;
+  }
+
+  return 0;
+}
