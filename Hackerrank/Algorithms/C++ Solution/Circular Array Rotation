@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    long int i,j,n,k,q;
+    cin >> n >> k >> q;
+    long int ar[n],br[n];
+
+    k = k%n;
+
+    for(i=0;i<n;i++)
+    cin >> ar[i];
+
+    j=0;
+    for(i=n-k;i<n;i++)
+    {
+        br[j] = ar[i];
+        j++;
+    }
+
+    for(i=0;i<(n-k);i++)
+    {
+        br[j] = ar[i];
+        j++;
+    }
+
+
+    while(q--)
+    {
+        cin >> i;
+        cout << br[i] << endl;
+    }
+    
+    return 0;
+}
