@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main ()
+{
+   int t;
+   cin >> t;
+
+   while(t--)
+   {
+      int i;
+      string s;
+      long long int n,c=0;
+      cin >> s;
+
+      n = stoi(s);
+
+      
+      for(i=0;i<s.length();i++)
+      {
+           if((int(s[i])-48)!=0)
+           {
+               if(n%(int(s[i])-48)==0)
+               c++;
+           }
+      }
+
+      cout << c  << endl;
+   }
+
+    return 0;
+}
+
