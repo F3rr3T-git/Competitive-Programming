@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int i,n,r;
+    cin >> n;
+    map<int,int> mp;
+
+    for(i=0;i<n;i++)
+    {
+       cin >> r;
+       mp[r]++;
+    }
+
+    cout << n << endl;  
+    for (auto itr = mp.begin(); itr != mp.end(); ++itr) 
+    { 
+       if( n - itr->second==0)
+       break;
+       else
+       cout << n - itr->second << endl;
+       
+       n = n - itr->second;
+          
+    } 
+    
+    return 0;
+}
+
