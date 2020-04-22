@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+  int ddu,ydu,mdu,d,y,m,f=0;
+  cin >> d >> m >> y >> ddu >> mdu >> ydu;
+
+  if(ydu > y)
+  f = 0;
+
+  else if(ydu == y)
+  {
+     if(mdu == m)
+     {
+       if(ddu < d)
+       f += (d - ddu)*15;
+     }
+
+     else if(mdu < m)
+     {
+       f += (m - mdu)*500;
+
+     }
+  }
+  
+  else
+  f += 10000;
+
+  cout << f << endl;
+
+  return 0;
+}
