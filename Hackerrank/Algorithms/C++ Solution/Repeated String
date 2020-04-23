@@ -1,0 +1,28 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int i,c=0,k=0;
+    string s;
+    long long int n;
+    cin >> s >> n;
+
+    for(i=0;i<s.length();i++)
+    {
+        if(s[i]=='a')
+        c++;
+    }
+
+     for(i=0;i<(n-((n/s.length())*s.length()));i++)
+    {
+        if(s[i]=='a')
+        k++;
+    }
+
+
+    cout << (n/s.length())*c + k << endl;
+
+    return 0;
+}
