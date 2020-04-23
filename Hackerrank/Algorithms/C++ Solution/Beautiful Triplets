@@ -1,1 +1,51 @@
+#include <bits/stdc++.h>
+using namespace std;
 
+int main()
+{
+ int i,n,d,c=0;
+ cin >> n >> d;
+ int ar[n],br[20002]={0};
+
+ for(i=0;i<n;i++)
+ cin >> ar[i];
+
+for(i=0;i<n;i++)
+br[ar[i]]++;
+
+for(i=0;i<n-1;i++)
+{
+  if(ar[i]-d >= ar[0] && ar[i]+d <= ar[n-1])
+  {
+     if(br[ar[i]-d] && br[ar[i]+d])
+     {
+     c++; 
+     
+     if(br[ar[i]-d] > 1)
+     {
+       c--;
+       c += br[ar[i]-d];
+     }
+
+     else if( br[ar[i]] > 1)
+     {
+       c--;
+       c += br[ar[i]];
+     }
+
+     else if(br[ar[i]+d] > 1)
+      
+     {
+       c--;
+       c += br[ar[i]+d];
+     }
+
+     }
+  }
+  
+}
+
+cout <<  c << endl;
+
+  return 0;
+}
