@@ -1,0 +1,60 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int h,m;
+    cin >> h >> m;
+    string s1,s[] = 
+    {"o' clock","one","two","three","four","five","six","seven","eight","nine","ten",
+    "eleven","twelve","thirteen","fourteen","quarter","sixteen","seventeen","eighteen",       "nineteen","twenty","twenty one","twenty two","twenty three","twenty four","twenty five","twenty six","twenty seven","twenty eight","twenty nine","half"};
+
+    if(m==0)
+    {
+        s1 += s[h];
+        s1 += " ";
+        s1 += s[0];
+    }
+    else if(m==1)
+    {
+        s1 += s[m];
+        s1 += " minute past ";
+        s1 += s[h];
+    }
+    else if(m>1&&m<=29)
+    {
+        s1 += s[m];
+
+        if(m!=15)
+        s1 += " minutes past ";
+        else
+        s1 += " past ";
+
+        s1 += s[h];
+    }
+    else if(m==30)
+    {
+        s1 += s[m];
+        s1 += " past ";
+        s1 += s[h];
+    }
+    else if(m==59)
+    {
+        s1 += s[60-m];
+        s1 += " minute to ";
+        s1 += s[h+1];
+    }
+    else if(m>30&&m<=58)
+    {
+        s1 += s[60-m];
+        if((60-m)!=15)
+        s1 += " minutes to ";
+        else
+        s1 += " to ";
+        s1 += s[h+1];
+    }
+
+    cout << s1 << endl;
+
+    return 0;
+}
