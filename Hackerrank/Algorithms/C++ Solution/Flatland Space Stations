@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+  long long int i,n,m,mx=0;
+  cin >> n >> m;
+  long long int ar[m];
+
+  for(i=0;i<m;i++)
+  cin >> ar[i];
+
+  if(m==1)
+  {
+    mx = max(ar[0],(n-1)-ar[0]);
+  }
+  else 
+  {
+    sort(ar,ar+m);
+
+    for(i=0;i<m-1;i++)
+    mx = max(mx,ar[i+1]-ar[i]);
+
+    mx = mx/2;
+    mx = max(mx,ar[0]);
+    mx = max(mx,(n-1)-ar[m-1]);
+  }
+
+  cout << mx << endl;
+
+  return 0;
+}
