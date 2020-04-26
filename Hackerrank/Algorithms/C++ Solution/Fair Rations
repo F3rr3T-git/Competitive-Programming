@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int i,n,r;
+    int sm;
+    cin >> n;
+    vector<int> v;
+
+    for(i=0;i<n;i++)
+    {
+        cin >> r;
+        if(r%2 != 0)
+        v.push_back(i);
+    } 
+
+    if(v.size()%2  != 0)
+    cout << "NO" << endl;
+    else
+    {
+      for(i=0;i<v.size();i=i+2)
+      {
+          sm += v[i+1] - v[i];
+      }
+
+      cout << sm*2 << endl;
+
+    }
+
+
+    return 0;
+}
