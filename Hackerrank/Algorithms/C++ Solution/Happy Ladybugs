@@ -1,0 +1,65 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+  int t;
+  cin >> t;
+
+  while(t--)
+  {
+    int n,i,fg=0;
+    string s;
+    map <char,int> mp;
+    cin >> n >> s;
+
+    mp['_'] = 0;
+
+    for(i=0;i<s.length();i++)
+    mp[s[i]]++;
+
+
+    for(auto it=mp.begin();it!=mp.end();it++)
+    {
+       if(it -> second == 1 && it -> first != '_' )
+       fg = 1;
+    }
+
+    if(mp['_']==0)
+    {
+
+    for(i=0;i<n;i=i+2)
+    {
+      if(i == n-1)
+      {
+        if(s[i-1] != s[i])
+        {
+          fg = 1;
+          break;
+        }
+       
+       }
+
+       else 
+       {
+         if(s[i] != s[i+1])
+         {
+           if(s[i] != s[i-1])
+           {
+             fg = 1;
+             break;
+           }
+         }
+
+       }
+    }
+  }
+
+   cout << (fg ? "NO" : "YES")  << endl;
+
+
+  }
+
+
+  return 0;
+}
