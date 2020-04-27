@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+  int t;
+  cin >> t;
+
+  while(t--)
+  {
+    int i,n,a,b,sm;
+    cin >> n >> a >> b;
+    set <int> st;
+
+    sm = (n-1)*a;
+    st.insert(sm);
+
+    for(i=0;i<n-1;i++)
+    {
+      sm -= a;
+      sm += b;
+      st.insert(sm);
+    }
+
+    for(auto it=st.begin();it!=st.end();it++)
+    cout << *it << " ";
+
+    cout << endl;
+  }
+
+  return 0;
+}
