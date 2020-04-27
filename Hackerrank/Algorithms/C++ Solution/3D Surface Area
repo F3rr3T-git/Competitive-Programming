@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int r,c,i,j,answer;
+    cin>>r>>c;
+    answer=2*r*c;
+    int arr[r][c];
+    
+    for(i=0;i<r;++i)
+    {
+        for(j=0;j<c;++j)
+        cin>>arr[i][j];
+    }
+    
+    for(i=0;i<c;++i)
+      answer+=arr[0][i]+arr[r-1][i];
+    
+    
+    for(i=0;i<r;++i)
+      answer+=arr[i][0]+arr[i][c-1];
+    
+    for(i=0;i<r;++i)
+      for(j=0;j<c-1;++j)
+        answer+=abs(arr[i][j]-arr[i][j+1]);
+        
+    
+    for(j=0;j<c;++j)
+        for(i=0;i<r-1;++i)
+            answer+=abs(arr[i][j]-arr[i+1][j]);
+        
+    
+    cout<<answer;
+
+}
