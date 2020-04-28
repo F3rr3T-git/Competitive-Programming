@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int i;
+    string s;
+    cin >> s;
+    vector<char> v;
+    v.push_back('@');
+
+    for(i=0;i<s.length();i++)
+    {
+        if(v[v.size()-1]==s[i])
+        v.pop_back();
+        else
+        v.push_back(s[i]);
+    }
+    
+    if(v.size()==1)
+    cout << "Empty String" << endl;
+    else 
+    {
+    s.clear();
+
+    for(i=1;i<v.size();i++)
+    {
+        s += v[i];
+    }
+
+    cout << s << endl;
+    }
+    
+    return 0;
+}
