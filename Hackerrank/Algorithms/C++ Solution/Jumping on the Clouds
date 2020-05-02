@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+  int n,i,c=0;
+  cin >> n;
+  int ar[n];
+
+  for(i=0;i<n;i++)
+  cin >> ar[i];
+
+
+  i=0;
+
+  while(i<n)
+  {
+
+    if(ar[i+2]==0)
+    {
+      i = i+2;
+      c++;
+    }
+    else
+    {
+      i++;
+      c++;
+    }
+    
+  }
+
+  cout << c-1 << endl;
+
+  return 0;
+}
