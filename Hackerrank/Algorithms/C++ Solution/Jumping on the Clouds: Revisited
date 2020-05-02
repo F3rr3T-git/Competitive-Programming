@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+  int i,n,k,c=0;
+  cin >> n >> k;
+  int ar[n];
+
+  for(i=0;i<n;i++)
+  cin >> ar[i];
+
+  i = 0;
+  i = i+k;
+
+  while(i%n != 0)
+  {
+  
+    if(ar[i%n]==1)
+    c = c+3;
+    else
+    c++;
+
+    i = i+k;
+  }
+
+   ar[0] == 1 ? c = c+3 : c++; 
+
+  cout << 100-c << endl;
+
+  return 0;
+}
