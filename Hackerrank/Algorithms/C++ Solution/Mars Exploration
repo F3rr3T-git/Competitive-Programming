@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   int i=0,j=1,k=2,c=0;
+   string s;
+   cin >> s;
+
+   while(k<s.length())
+   {
+       if(s[i]!='S')
+       c++;
+
+       if(s[j]!='O')
+       c++;
+
+       if(s[k]!='S')
+       c++;
+
+       i += 3;
+       j += 3;
+       k += 3;
+   }
+
+   cout << c << endl;
+
+    return 0;
+}
