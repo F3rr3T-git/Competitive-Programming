@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+  int i,n,mn=100003;
+  cin >> n;
+  int ar[n+1];
+  map<int,int> mp; 
+
+  for(i=1;i<=n;i++)
+  cin >> ar[i];
+
+  for(i=1;i<=n;i++)
+  {
+    if(mp[ar[i]]==0)
+    mp[ar[i]] = i;
+    else
+    {
+      mn = min(mn,i-mp[ar[i]]);
+      mp[ar[i]] = i;
+    }
+
+    if(mn==1)
+    break;
+  }
+
+  cout << (mn == 100003 ? -1 : mn) << endl;
+  
+  
+  return 0;
+}
