@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+
+{
+    int t,fg=0;
+    string s;
+    cin >> t;
+
+    while(t--)
+    { 
+      long long int i;
+       cin >> s;
+       
+       i=0;
+       while(1)
+       {
+           if(i>=s.length()-1-i)
+           break;
+
+           if( llabs(int(s[i+1])-int(s[i]))!=llabs(int(s[s.length()-1-i])-int(s[s.length()-2-i])) )
+           {
+               fg =1;
+               break;
+           }
+           else
+           fg=0;
+
+
+           i++;
+       }
+
+       if(fg==1)
+       cout << "Not Funny" << endl;
+       else
+       cout << "Funny" << endl;
+       
+       
+    }
+
+    return 0;
+}
