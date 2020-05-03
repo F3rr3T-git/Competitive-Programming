@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int i;
+    string s;
+    getline(cin,s);
+    set<char> st;
+
+    for(i=0;i<s.length();i++)
+    {
+        if(isalpha(s[i]))
+        st.insert(int(tolower(s[i]))-97);
+    }
+
+    
+    if(st.size()==26)
+    cout << "pangram" << endl;
+    else
+    cout << "not pangram" << endl;
+
+
+    return 0;
+}
+
