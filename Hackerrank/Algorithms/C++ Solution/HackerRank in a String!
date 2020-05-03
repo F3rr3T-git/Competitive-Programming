@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+  int t;
+  cin >> t;
+  string s = "hackerrank";
+  
+  while(t--)
+  {
+    int i=0,j=0,fg=0;
+    string p;
+    cin >> p;
+
+    while(1)
+    {
+       if(s[i]==p[j])
+       {
+         i++;
+         j++;
+       }
+
+       else
+       j++;
+
+       if(i == 9)
+       {
+         fg =1;
+         break;
+       } 
+
+       else if(j == p.length()-1)
+       break;
+    }
+
+    cout << (fg ? "YES" : "NO") << endl;
+  }
+
+  return 0;
+}
