@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t,i;
+    
+    cin >> t;
+
+    while(t--)
+    {
+       vector<int> v(26,0);
+       int c=0;
+       string s;
+       cin >> s;
+       
+       if(s.length()%2==0)
+       {
+
+       for(i=0;i<(s.length()/2);i++)
+       {
+          v[int(s[i])-97]++;
+          v[int(s[(s.length()-1)-i])-97]--;   
+       }
+
+       for(i=0;i<26;i++)
+       {
+          if(v[i]!=0)
+           c += abs(v[i]);
+       }
+       
+       cout << c/2 <<endl;
+       }
+       else
+       cout << "-1" << endl;
+    }
+
+
+    return 0;
+}
