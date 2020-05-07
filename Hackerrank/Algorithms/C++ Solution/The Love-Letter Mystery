@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin >> t;
+
+    while(t--)
+    {
+        int i,sm=0;
+        string s;
+        cin >> s;
+
+        for(i=0;i<(s.length()/2);i++)
+         sm += abs(int(s[i])-int(s[s.length()-1-i]));
+
+        cout << sm << endl; 
+    }
+
+    return 0;
+}
