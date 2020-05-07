@@ -1,0 +1,55 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+  int t;
+  cin >> t;
+
+  while(t--)
+  {
+    long int i,j,r,fg=0; 
+    string s;
+    cin >> s;
+
+    i=0;
+    j=s.length()-1;
+
+    while(1)
+    {
+
+     if(s[i]==s[j])
+     { 
+       i++;
+       j--;
+     }
+     else
+     {
+       if(s[i] == s[j-1] && s[i+1] == s[j-2])
+       {
+          r = j;
+          fg =1; 
+         break;
+       }
+       else if(s[j] == s[i+1] && s[j-1] == s[i+2])
+       {
+         
+         r = i;
+         fg =1;
+         break;
+       }
+     }
+
+    
+     if(i==j)
+     break;
+     if(i>j)
+     break;
+    
+    }
+
+    cout << (fg ? r : -1) << endl;
+  }
+
+  return 0;
+}
