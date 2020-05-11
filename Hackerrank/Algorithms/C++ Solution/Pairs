@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+  long long int i,n,k,r,c=0;
+  cin >> n >> k;
+  set<long long int> st;
+
+  for(i=0;i<n;i++)
+  {
+    cin >> r;
+    st.insert(r);
+  }
+
+  for(auto it=st.begin();it != st.end();it++)
+  {
+     if(st.count(*it+k))
+     c++;
+  }
+
+  cout << c << endl;
+}
