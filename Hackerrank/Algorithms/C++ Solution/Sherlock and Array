@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+  int t;
+  cin >> t;
+
+  while(t--)
+  {
+    int i,fg=0;
+    long long int  smf=0,smb=0,n;
+    cin >> n;
+    int ar[n+1]={0};
+
+    for(i=1;i<=n;i++)
+    {
+      cin >> ar[i];
+      smf += ar[i];
+    }
+
+    for(i=1;i<=n;i++)
+    {
+      smf -= ar[i];
+      smb += ar[i-1];
+
+      if(smb == smf)
+      {
+        fg = 1;
+        break;
+      }
+
+    }
+
+    cout << (fg ? "YES" : "NO") << endl;
+
+  }
+
+  return 0;
+}
