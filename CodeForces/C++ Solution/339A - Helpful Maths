@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define endl '\n'
+ 
+int main()
+{
+        int i;
+        string s;
+        vector<int> v;
+        cin >> s;
+        
+        for(i=0;i<s.length();i++)
+        if(isdigit(s[i]))
+        v.push_back( int(s[i])-48);
+        
+        s.clear();
+        
+        sort(v.begin(),v.end());
+        
+        
+        for(i=0;i<v.size();i++)
+        {
+        s += to_string(v[i]);
+        s += '+';
+        }
+        
+        s.pop_back();
+        
+        cout << s << endl;
+        
+        return 0;
+}
