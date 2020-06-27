@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+         int i,n;
+         string s;
+         cin >> n >> s;
+         vector <char> v;
+         
+         v.push_back(s[0]);
+         
+         for(i=1;i<n;i++)
+         {
+                  if(v[v.size()-1]==s[i])
+                  ;
+                  else
+                  v.push_back(s[i]);
+         }
+         
+         cout << n - v.size() << endl;
+         
+         
+         return 0;
+}
