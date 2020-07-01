@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define endl '\n'
+ 
+int main()
+{
+        
+        int n,in,ot,i,m=0,sm=0;
+        cin >> n;
+        
+        for(i=0;i<n;i++)
+        {
+        cin >> ot >> in;
+        sm -= ot;
+        sm += in;
+        m = max(sm,m);
+        }
+        
+        cout << m << endl;
+        
+        return 0;
+}
