@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+         int i,n,t;
+         cin >> n >> t;
+         char ar[n];
+         
+         for(i=0;i<n;i++)
+         cin >> ar[i];
+         
+         while(t--)
+           for(i=n-1;i>=0;i--)
+             if(ar[i]=='G' && ar[i-1]=='B')
+               {
+                        swap(ar[i-1],ar[i]);
+                        i--;
+               }
+         
+         
+         for(i=0;i<n;i++)
+         cout << ar[i];
+         
+         return 0;
+}
