@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+         int n,h,i,r,c=0;
+         cin >> n >> h;
+         
+         for(i=0;i<n;i++)
+         {
+                  cin >> r;
+                  
+                  if(r>h)
+                  c++;
+         }
+         
+         cout << c*2 + (n-c) << endl;
+         
+         return 0;
+}
