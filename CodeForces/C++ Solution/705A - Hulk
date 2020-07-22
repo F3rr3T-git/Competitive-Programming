@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+         int i,n;
+         string s;
+         cin >> n;
+         
+         
+         for(i=1;i<=n;i++)
+         {
+                  (i%2!=0) ? s.append("I hate") : s.append("I love");
+                  
+                  if(i!=n)
+                  s.append(" that ");
+         }
+         
+         s.append(" it");
+         
+         cout << s << endl;
+         
+         return 0;
+}
