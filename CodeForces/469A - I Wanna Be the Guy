@@ -1,0 +1,45 @@
+#include <iostream>
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
+int main()
+{
+      int i,levl,p,r,fg=0;
+      cin >> levl;
+      int ar[levl+1]={0};
+      
+      cin >> p;
+      
+      while(p--)
+      {
+            cin >> r;
+            ar[r]++;
+      }
+      
+      cin >> p;
+      
+      while(p--)
+      {
+            cin >> r;
+            ar[r]++;
+      }
+      
+     
+      
+      for(i=1;i<=levl;i++)
+      {
+            if(ar[i]==0)
+            {
+                  fg = 1;
+                  break;
+            }
+      }
+      
+      if(fg==1)
+      cout << "Oh, my keyboard!" << endl;
+      else
+      cout << "I become the guy." << endl;
+      
+      return 0;
+}
