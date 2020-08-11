@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+         int i,n,sm=0;
+         cin >> n;
+         string r;
+         map<string,int> mp;
+         
+         mp["Tetrahedron"] = 4;
+         mp["Cube"] = 6;
+         mp["Octahedron"] = 8;
+         mp["Dodecahedron"] = 12;
+         mp["Icosahedron"] = 20;
+         
+         while(n--)
+         {
+                  cin >> r;
+                  sm += mp[r];
+         }
+         
+         cout << sm << endl;
+         
+         return 0;
+}
